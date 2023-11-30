@@ -252,6 +252,10 @@
     </Reference>
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="call copy_to_dir.bat" />
+  </Target>
+
   <!--<ItemGroup>
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>-->
